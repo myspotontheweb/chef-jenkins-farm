@@ -1,4 +1,13 @@
-# jenkins-farm
+jenkins-farm cookbook
+=====================
 
-TODO: Enter the cookbook description here.
+This is an example cookbook to demonstrate how a Jenkins build farm can be setup using the community
+jenkins cookbook.
+
+Recipes
+=======
+Cookbook has the following recipes
+
+- master
+- slave
 
