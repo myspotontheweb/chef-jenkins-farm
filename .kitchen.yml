@@ -1,0 +1,31 @@
+---
+driver:
+  name: docker
+  use_sudo: false
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: ubuntu-14.04
+    driver_config:
+      image: ubuntu:14.04
+      platform: ubuntu
+      forward:
+      - 8080:8080
+  - name: centos-66
+    driver_config:
+      image: centos:6.6
+      platform: centos
+      forward:
+      - 8081:8080
+
+suites:
+  - name: master
+    run_list:
+      - recipe[jenkins-farm::master]
+    attributes:
+  - name: slave
+    run_list:
+      - recipe[jenkins-farm::slave]
+    attributes:

@@ -1,0 +1,14 @@
+{
+  "name": "master01",
+  "tags": [
+    "jenkins_master"
+  ],
+  "normal": {
+    "jenkins-farm": {
+      "public_key": "xyz123"
+    }
+  },
+  "run_list": [
+    "recipe[jenkins-farm::master]"
+  ]
+}
