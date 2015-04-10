@@ -1,0 +1,7 @@
+{
+  "name": "slave01",
+  "tags": [
+    "jenkins_slave"
+  ],
+  "fqdn": "slave01.demo.com"
+}
