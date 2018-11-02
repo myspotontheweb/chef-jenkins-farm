@@ -4,11 +4,11 @@ maintainer_email 'mark@myspotontheweb.com'
 license          'all_rights'
 description      'Installs/Configures jenkins-farm'
 long_description 'Installs/Configures jenkins-farm'
-version          '0.1.0'
+version          '0.1.1'
 
-supports "ubuntu"
-supports "centos"
+%w(ubuntu redhat centos scientific oracle amazon).each do |os|
+  supports os
+end
 
-depends "apt"
 depends "java"
 depends "jenkins"
